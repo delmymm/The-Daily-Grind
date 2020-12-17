@@ -1,0 +1,20 @@
+{
+  "name": "the-daily-grind",
+  "version": "1.0.0",
+  "description": "This application will serve as a database for coffee/tea aficionados.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/delmymm/The-Daily-Grind.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/delmymm/The-Daily-Grind/issues"
+  },
+  "homepage": "https://github.com/delmymm/The-Daily-Grind#readme"
+}
