@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const drink = require('../models/Drink');
+const location = require('../models/Location');
 
 // route to get all dishes
 router.get('/', async (req, res) => {
@@ -24,5 +25,29 @@ router.get('/', async (req, res) => {
           res.status(500).json(err);
       };     
   });
+
+// route to get all locations
+router.get('/', async (req, res) => {
+  const locationData = await Location.findAll().catch((err) => { 
+      res.json(err);
+    });
+      const locations = locationData.map((location) => location.get({ plain: true }));
+      res.render('all', { location });
+    });
+
+// route to get one location
+router.get('/location/:id', async (req, res) => {
+  try{ 
+      const locationData = await Location.findByPk(req.params.id);
+      if(!locationData) {
+          res.status(404).json({message: 'No location with this id!'});
+          return;
+      }
+      const location = locationData.get({ plain: true });
+      res.render('location', location);
+    } catch (err) {
+        res.status(500).json(err);
+    };     
+});
 
 module.exports = router;

@@ -5,33 +5,27 @@ class Location extends Model {}
 
 Location.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
-    Name: {
+    store_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    Street_Address: {
+    street_address: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    City: {
+    city: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    State: {
+    state_and_zip: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    Phone: {
+    phone: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    Website: {
+    website: {
         type: DataTypes.STRING,
         allowNull: false,
       },
