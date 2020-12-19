@@ -7,7 +7,7 @@ const drinkData = [
     drink_type: 'Coffee',
     store_name: 'Joe Coffee and Espresso Bar',
     store_location: '145 E Utah Ave Ste 2, Payson, UT 84651',
-    store_phone: 801-465-1220,
+    store_phone: '801-465-1220',
   },
   {
     drink_name: 'Carmal Macchiato',
@@ -15,7 +15,7 @@ const drinkData = [
     drink_type: 'Coffee',
     store_name: 'Peace on Earth Coffee',
     store_location: '35 N 300 W #200 Provo, Utah 84601',
-    store_phone: 801-577-4710,
+    store_phone: '801-577-4710',
   },
   {
     drink_name: 'Carmel Blonde',
@@ -23,7 +23,7 @@ const drinkData = [
     drink_type: 'Coffee',
     store_name: 'The Coffee Shop',
     store_location: '12571 S. PASTURE RD STE A, Riverton, UT 84096',
-    store_phone: 801-759-9595,
+    store_phone: '801-759-9595',
   },
   {
     drink_name: 'Pourover',
@@ -31,7 +31,7 @@ const drinkData = [
     drink_type: 'Coffee',
     store_name: 'Rugged Grounds',
     store_location: '29 East 400 South, Salt Lake City, Utah 84111',
-    store_phone: 801-888-3367,
+    store_phone: '801-888-3367',
   },
   {
     drink_name: 'Coffee or Die',
@@ -39,7 +39,7 @@ const drinkData = [
     drink_type: 'Coffee',
     store_name: 'Black Rifle Coffee Company',
     store_location: '1144 S 500 W Salt Lake City, UT 84101',
-    store_phone: 385-262-7184,
+    store_phone: '385-262-7184',
   },
   {
     drink_name: 'Americano',
@@ -47,10 +47,10 @@ const drinkData = [
     drink_type: 'Coffee',
     store_name: 'Dailey Rise Coffee',
     store_location: '2865 Washington Blvd., Ogden, Utah 84401',
-    store_phone: 801-393-4581,
+    store_phone: '801-393-4581',
   },
 ];
 
-const seedDrinks = () => Drink.bulkCreate(drinkdata);
+const seedDrinks = () => Drink.bulkCreate(drinkData);
 
 module.exports = seedDrinks;

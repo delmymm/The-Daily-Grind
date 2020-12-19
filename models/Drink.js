@@ -16,8 +16,8 @@ Drink.init(
       allowNull: false,
     },
     explaination: {
-      type: DataTypes.STRING,
-      allowNull: true,
+      type: DataTypes.TEXT,
+      allowNull: false,
     },
     drink_type: {
       type: DataTypes.STRING,
@@ -32,7 +32,7 @@ Drink.init(
       allowNull: false,
     },
     store_phone: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
   },

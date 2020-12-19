@@ -6,11 +6,11 @@ const locationData = [
     street_address: '145 E Utah Ave Ste 2',
     city: 'Payson', 
     state_and_zip: 'Utah, 84660',
-    phone: 801-465-1220, 
+    phone: '801-465-1220', 
     website: 'http://places.singleplatform.com/joe-coffee-shop-and-espresso/menu?ref=google#menu_997301',
 },
 {
-    street_name: 'Peace on Earth Coffee',
+    store_name: 'Peace on Earth Coffee',
     street_address: '35 N 300 W #200',
     city: 'Provo', 
     state_and_zip: 'Utah, 84601',
@@ -18,7 +18,7 @@ const locationData = [
     website: 'https://peaceonearthcoffee.squarespace.com/',
 },
 {
-    street_name: 'The Coffee Shop',
+    store_name: 'The Coffee Shop',
     street_address: '12571 S. PASTURE RD STE A',
     city: 'Riverton', 
     state_and_zip: 'Utah, 84096',
@@ -26,7 +26,7 @@ const locationData = [
     website: 'http://www.thecoffeeshoput.com/',
 },
 {
-    street_name: 'Rugged Grounds',
+    store_name: 'Rugged Grounds',
     street_address: '29 East 400 South',
     city: 'Salt Lake City', 
     state_and_zip: 'Utah 84111',
@@ -34,11 +34,11 @@ const locationData = [
     website: 'http://www.ruggedgrounds.com/',
 },
 {
-    street_name: 'Black Rifle Coffee Company',
+    store_name: 'Black Rifle Coffee Company',
     street_address: '1144 S 500 W',
     city: 'Salt Lake City', 
     state_and_zip: 'Utah 84101',
-    phone: 385-262-7184, 
+    phone: '385-262-7184', 
     website: 'https://www.blackriflecoffee.com/',
 },
 {
@@ -51,6 +51,6 @@ const locationData = [
   },
 ];
 
-const seedLocation = () => Location.bulkCreate(locationdata);
+const seedLocation = () => Location.bulkCreate(locationData);
 
 module.exports = seedLocation;

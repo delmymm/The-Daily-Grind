@@ -1,9 +1,9 @@
 DROP DATABASE IF EXISTS daily_grind_db;
 CREATE DATABASE daily_grind_db;
 
-USE daily_grind_db;
+/* USE daily_grind_db;
 
-CREATE TABLE drink (
+/*CREATE TABLE drink (
     id INT NOT NULL AUTO_INCREMENT,
     drink_name VARCHAR(100) NULL,
     explaination VARCHAR(1000) NULL,
@@ -16,7 +16,7 @@ CREATE TABLE drink (
 
 SELECT * FROM drink;
 
-CREATE TABLE location (
+CREATE TABLE store_location (
     id INT NOT NULL AUTO_INCREMENT,
     store_name VARCHAR(100) NULL,
     street_address VARCHAR(1000) NULL,
@@ -26,3 +26,5 @@ CREATE TABLE location (
     website INT NOT NULL,
     PRIMARY KEY (id)
 );
+
+SELECT * FROM store_location;
