@@ -15,7 +15,7 @@ Drink.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
+    explaination: {
       type: DataTypes.STRING,
       allowNull: true,
     },

@@ -26,7 +26,7 @@ router.put('/:id', async (req, res) => {
     const drink = await Drink.update(
     {
         drink_name: req.body.drink_name,
-        description: req.body.description,
+        explaination: req.body.explaination,
         drink_type: req.body.drink_type,
         store_name: req.body.store_name,
         store_location: req.body.store_location,

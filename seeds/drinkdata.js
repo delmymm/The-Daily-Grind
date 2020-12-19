@@ -3,7 +3,7 @@ const { Drink } = require('../models');
 const drinkData = [
   {
     drink_name: 'Vanilla Latte',
-    description: 'They can come hot or iced, and though they contain a good amount of coffee, it tastes like you dipped a sugar cookie into coffee',
+    explaination: 'They can come hot or iced, and though they contain a good amount of coffee, it tastes like you dipped a sugar cookie into coffee',
     drink_type: 'Coffee',
     drink_id: 1,
     store_name: 'Joe Coffee and Espresso Bar',
@@ -12,7 +12,7 @@ const drinkData = [
   },
   {
     drink_name: 'Carmal Macchiato',
-    description: 'They taste like vanilla latte, but with caramel on top. Which incidentally is what they are.',
+    explaination: 'They taste like vanilla latte, but with caramel on top. Which incidentally is what they are.',
     drink_type: 'Coffee',
     drink_id: 2,
     store_name: 'Peace on Earth Coffee',
@@ -21,7 +21,7 @@ const drinkData = [
   },
   {
     drink_name: 'Carmel Blonde',
-    description: 'Carmel, Praline, White Chocolate',
+    explaination: 'Carmel, Praline, White Chocolate',
     drink_type: 'Coffee',
     drink_id: 3,
     store_name: 'The Coffee Shop',
@@ -30,7 +30,7 @@ const drinkData = [
   },
   {
     drink_name: 'Pourover',
-    description: 'hot water hand-poured over grinds for fuller, richer flavor',
+    explaination: 'hot water hand-poured over grinds for fuller, richer flavor',
     drink_type: 'Coffee',
     drink_id: 4,
     store_name: 'Rugged Grounds',
@@ -39,7 +39,7 @@ const drinkData = [
   },
   {
     drink_name: 'Coffee or Die',
-    description: 'Coffee or Die Roast serves as a reminder of the foundation of our great nation. Let no American forget where it all began.  This is a grind or Bean coffee that you can take home.  If you would like you can get a cup at their coffee bar in a variety of recipes',
+    explaination: 'Coffee or Die Roast serves as a reminder of the foundation of our great nation. Let no American forget where it all began.  This is a grind or Bean coffee that you can take home.  If you would like you can get a cup at their coffee bar in a variety of recipes',
     drink_type: 'Coffee',
     drink_id: 5,
     store_name: 'Black Rifle Coffee Company',
@@ -48,7 +48,7 @@ const drinkData = [
   },
   {
     drink_name: 'Americano',
-    description: 'espresso with hot water',
+    explaination: 'espresso with hot water',
     drink_type: 'Coffee',
     drink_id: 6,
     store_name: 'Dailey Rise Coffee',
