@@ -26,7 +26,7 @@ const drinkData = [
     drink_id: 3,
     store_name: 'The Coffee Shop',
     store_location: '12571 S. PASTURE RD STE A, RIVERTON, UT 84096',
-    store_phone: '801-759-9595',
+    store_phone: 801-759-9595,
   },
   {
     drink_name: 'Pourover',
