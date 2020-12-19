@@ -10,6 +10,7 @@ router.post('/', async (req, res) => {
     drink_type: req.body.drink_type,
     store_name: req.body.store_name,
     store_location: req.body.store_location,
+    store_phone: req.body.store_phone,
   });
   res.status(200).json(drinkData)
 } catch (err) {
@@ -29,6 +30,7 @@ router.put('/:id', async (req, res) => {
         drink_type: req.body.drink_type,
         store_name: req.body.store_name,
         store_location: req.body.store_location,
+        store_phone: req.body.store_phone,
     },
     {
       where: {

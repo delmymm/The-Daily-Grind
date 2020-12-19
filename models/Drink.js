@@ -31,6 +31,10 @@ Drink.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    store_phone: {
+      type: DataTypes.NUMBER,
+      allowNull: false,
+    },
   },
   {
     sequelize,

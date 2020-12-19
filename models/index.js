@@ -7,7 +7,7 @@ Drink.hasMany(Drink, {
 });
 
 Location.belongsTo(Location, {
-  foreignKey: 'drink_id',
+  foreignKey: 'location_id',
 });
 
 module.exports = { User, Drink, Location };

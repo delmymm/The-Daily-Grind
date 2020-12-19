@@ -35,12 +35,12 @@ Location.init(
         type: DataTypes.STRING,
         allowNull: false,
       },
-      location_id: {
+    location_id: {
         type: DataTypes.INTEGER,
         references: {
           model: 'location',
           key: 'id',
-        },
+      },
     },
   },
   {
