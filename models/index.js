@@ -2,12 +2,12 @@ const User = require('./User');
 const Drink = require('./Drink');
 const Location = require('./Location');
 
-/*Drink.hasMany(Drink, {
-  foreignKey: 'drink_id',
+/*Drink.belongsTo(Location, {
+  foreignKey: 'store_name',
 });
 
-Location.belongsTo(Location, {
-  foreignKey: 'location_id',
-});
-*/
+Location.belongsTo(Drink, {
+  foreignKey: 'store_name',
+});*/
+
 module.exports = { User, Drink, Location };
