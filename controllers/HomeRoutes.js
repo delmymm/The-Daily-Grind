@@ -2,16 +2,16 @@ const router = require('express').Router();
 const drink = require('../models/Drink');
 const location = require('../models/Location');
 
-// route to get all dishes
+// route to get all drinks
 router.get('/', async (req, res) => {
-    const drinkData = await Drink.findAll().catch((err) => { 
+    const drinkData = await drink.findAll().catch((err) => { 
         res.json(err);
       });
         const drinks = drinkData.map((drink) => drink.get({ plain: true }));
         res.render('all', { drinks });
       });
   
-  // route to get one dish
+  // route to get one drink
   router.get('/drink/:id', async (req, res) => {
     try{ 
         const drinkData = await Drink.findByPk(req.params.id);
