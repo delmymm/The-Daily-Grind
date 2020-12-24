@@ -22,7 +22,7 @@ body {
 
   }
 
-  .jumbotron {
+  #welcomeJumbo {
     max-height: 200px;
   }
   
