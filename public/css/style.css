@@ -15,9 +15,19 @@ body {
 
   #welcomeJumbo {
     max-height: 100px;
+    padding: 16px;
+    background-color: #EBF5FB;
   }
   
   .fa {
     padding: 10px;
     color: black;
+  }
+
+  .navbar {
+    background-image: url(/public/assets/mountains.png);
+    background-repeat: no-repeat;
+    height: 100px;
+    object-position: 20% 10%;
+    object-fit: cover;
   }
