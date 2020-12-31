@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Drink extends Model {}
+class Drink extends Model { }
 
 Drink.init(
   {
@@ -23,19 +23,9 @@ Drink.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    store_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    store_location: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    store_phone: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+
   },
+
   {
     sequelize,
     freezeTableName: true,
