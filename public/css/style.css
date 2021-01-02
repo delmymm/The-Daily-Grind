@@ -1,5 +1,5 @@
 body {
-  background-color: #EBF5FB;
+  background-color: #4869A0;
   font-family: 'Merriweather', serif;
 }
 
@@ -16,7 +16,8 @@ body {
   #welcomeJumbo {
     max-height: 100px;
     padding: 16px;
-    background-color: #EBF5FB;
+    background-image: url(/public/assets/mountains2.png);
+    /* background-color: none; */
   }
   
   .fa {
@@ -30,4 +31,5 @@ body {
     height: 100px;
     object-position: 20% 10%;
     object-fit: cover;
+    /* font-weight: bold; */
   }
