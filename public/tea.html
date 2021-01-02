@@ -16,7 +16,13 @@
             type="text/css">
 
         <!-- CSS -->
+<<<<<<< HEAD
         <link rel="stylesheet" href="/public/css/main.css" />
+=======
+        <link rel="stylesheet" href="/public/css/style.css" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+>>>>>>> ff675d8514f00b03f3a5c0ec2f48df354ff48db5
 
         <!-- Font link -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -62,9 +68,9 @@
         </nav>
 
         <!-- welcome jumbotron -->
-        <div class="jumbotron jumbotron-fluid" id="welcomeJumbo">
+        <div class="jumbotron jumbotron-fluid bg-light" id="welcomeJumbo">
             <div class="container">
-                <h1 class="display-4">Welcome, _________! </h1>
+                <h1 class="display-4">Welcome, ! </h1>
             </div>
         </div>
 
@@ -77,9 +83,8 @@
                             src="https://static.vecteezy.com/system/resources/previews/000/599/083/non_2x/location-icon-vector.jpg"
                             alt="location finder">
                         <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
+                            <p class="card-text">
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -103,9 +108,13 @@
                             src="https://icons-for-free.com/iconfiles/png/512/camera-131965017355314519.png"
                             alt="picture upload icon">
                         <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
+                            <p class="card-text">
+                            <form action="upload.php" method="post" enctype="multipart/form-data">
+                                Share images of your favorite spots/treats!
+                                <input type="file" name="fileToUpload" id="fileToUpload">
+                                <input type="submit" value="Upload Image" name="submit">
+                            </form>
+                            </p>
                         </div>
                     </div>
                 </div>
