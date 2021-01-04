@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Dish = require('../../models/Drink');
+const Drink = require('../../models').drink;
 
 // route to create/add a drink
 router.post('/', async (req, res) => {
@@ -8,7 +8,7 @@ router.post('/', async (req, res) => {
     drink_name: req.body.drink_name,
     drink_description: req.body.drink_description,
     drink_type: req.body.drink_type,
-    store_name: req.body.store_name,
+    // store_name: req.body.store_name,
   });
   res.status(200).json(drinkData)
 } catch (err) {
