@@ -3,7 +3,7 @@ const { Drink } = require('../models');
 const drinkData = [
   {
     drink_name: 'Vanilla Latte',
-    explaination: 'They can come hot or iced, and though they contain a good amount of coffee, it tastes like you dipped a sugar cookie into coffee',
+    drink_description: 'They can come hot or iced, and though they contain a good amount of coffee, it tastes like you dipped a sugar cookie into coffee',
     drink_type: 'Coffee',
     store_name: 'Joe Coffee and Espresso Bar',
     store_location: '145 E Utah Ave Ste 2, Payson, UT 84651',
@@ -11,7 +11,7 @@ const drinkData = [
   },
   {
     drink_name: 'Carmal Macchiato',
-    explaination: 'They taste like vanilla latte, but with caramel on top. Which incidentally is what they are.',
+    drink_description: 'They taste like vanilla latte, but with caramel on top. Which incidentally is what they are.',
     drink_type: 'Coffee',
     store_name: 'Peace on Earth Coffee',
     store_location: '35 N 300 W #200 Provo, Utah 84601',
@@ -19,7 +19,7 @@ const drinkData = [
   },
   {
     drink_name: 'Carmel Blonde',
-    explaination: 'Carmel, Praline, White Chocolate',
+    drink_description: 'Carmel, Praline, White Chocolate',
     drink_type: 'Coffee',
     store_name: 'The Coffee Shop',
     store_location: '12571 S. PASTURE RD STE A, Riverton, UT 84096',
@@ -27,7 +27,7 @@ const drinkData = [
   },
   {
     drink_name: 'Pourover',
-    explaination: 'hot water hand-poured over grinds for fuller, richer flavor',
+    drink_description: 'hot water hand-poured over grinds for fuller, richer flavor',
     drink_type: 'Coffee',
     store_name: 'Rugged Grounds',
     store_location: '29 East 400 South, Salt Lake City, Utah 84111',
@@ -35,7 +35,7 @@ const drinkData = [
   },
   {
     drink_name: 'Coffee or Die',
-    explaination: 'Coffee or Die Roast serves as a reminder of the foundation of our great nation. Let no American forget where it all began.  This is a grind or Bean coffee that you can take home.  If you would like you can get a cup at their coffee bar in a variety of recipes',
+    drink_description: 'Coffee or Die Roast serves as a reminder of the foundation of our great nation. Let no American forget where it all began.  This is a grind or Bean coffee that you can take home.  If you would like you can get a cup at their coffee bar in a variety of recipes',
     drink_type: 'Coffee',
     store_name: 'Black Rifle Coffee Company',
     store_location: '1144 S 500 W Salt Lake City, UT 84101',
@@ -43,7 +43,7 @@ const drinkData = [
   },
   {
     drink_name: 'Americano',
-    explaination: 'espresso with hot water',
+    drink_description: 'espresso with hot water',
     drink_type: 'Coffee',
     store_name: 'Dailey Rise Coffee',
     store_location: '2865 Washington Blvd., Ogden, Utah 84401',
