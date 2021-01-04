@@ -58,6 +58,11 @@ const drink = sequelize.define('drinks', {
     type: Sequelize.STRING,
     allowNull: false,
   },
+  store_name: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
+
 });
 return drink
 };

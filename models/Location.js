@@ -77,6 +77,7 @@ module.exports = (sequelize, Sequelize) => {
       primaryKey: true,
       autoIncrement: true,
     },
+  
   });
   return location
   };
