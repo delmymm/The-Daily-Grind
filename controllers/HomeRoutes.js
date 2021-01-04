@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const drink = require('../models/Drink');
 const location = require('../models/Location');
+const kid = require('../models/Kid');
 
 // route to get all drinks
 router.get('/', async (req, res) => {
