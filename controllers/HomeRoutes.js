@@ -14,10 +14,19 @@ router.get('/', async (req, res) => {
 });
 router.get("/form", async (req, res) => {
   res.render('form');
-}
+});
 
-);
+router.get("/coffee", async (req, res) => {
+  res.render('coffee');
+});
 
+router.get("/tea", async (req, res) => {
+  res.render('tea');
+});
+
+router.get("/kids", async (req, res) => {
+  res.render('kids');
+});
 
 // route to get one drink
 router.get('/drink/:id', async (req, res) => {
