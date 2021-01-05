@@ -1,21 +1,39 @@
 body {
-  background-color: #EBF5FB;
+  background-color: #4869A0;
+  font-family: 'Merriweather', serif;
 }
 
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: black;
-    text-align: center;
-  }
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 
-  .social-media {
-    position: fixed;
-    text-align: center;
-    bottom: 0;
-    width: 100%;
-    display: block;
-  }
+#welcomeJumbo {
+  max-height: 100px;
+  padding: 16px;
+  background-image: url(/public/assets/mountains2.png);
+}
 
+.fa {
+  padding: 10px;
+  color: black;
+}
+
+.navbar {
+  background-image: url(/public/assets/mountains.png);
+  background-repeat: no-repeat;
+  height: 100px;
+  -o-object-position: 20% 10%;
+     object-position: 20% 10%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  text-shadow: 2px 2px #faf7f7;
+}
+/*# sourceMappingURL=style.css.map */
