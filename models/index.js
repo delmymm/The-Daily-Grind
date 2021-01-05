@@ -1,13 +1,33 @@
-const User = require('./User');
-const Drink = require('./Drink');
-const Location = require('./Location');
+const config = require('../config/connection');
 
-/*Drink.belongsTo(Location, {
-  foreignKey: 'store_name',
+const Sequelize = require("sequelize");
+const sequelize = new Sequelize(
+  config.DB, config.USER, config.PASSWORD, {
+    host: config.HOST,
+    dialect: config.dialect
+  }
+)
+
+const db = {}
+db.Sequelize = Sequelize;
+db.sequelize = sequelize;
+
+
+// db.user = require('./User') (sequelize, Sequelize);
+db.drink = require('./Drink') (sequelize, Sequelize);
+db.location = require('./Location') (sequelize, Sequelize);
+
+db.location.belongsToMany(db.drink, {
+  through:"location_drinks",
+  foreignKey: "location_id",
+  otherKey: "drink_id"
 });
 
-Location.belongsTo(Drink, {
-  foreignKey: 'store_name',
-});*/
+db.drink.belongsToMany(db.location, {
+  through:"location_drinks",
+  foreignKey: "drink_id",
+  otherKey: "location_id"
+});
 
-module.exports = { User, Drink, Location };
+
+module.exports = db;

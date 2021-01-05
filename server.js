@@ -1,26 +1,28 @@
-// Dependencies=============================================================
+require("dotenv").config()
+const path = require('path');
 const express = require('express');
-const path = require("path");
+const session = require('express-session');
+const exphbs = require('express-handlebars');
+const db = require('./models');
 
-// Sets up the Express App
-// =============================================================
+const routes = require('./controllers');
+const helpers = require('./utils/helpers');
+
 const app = express();
-const port = process.env.port || 3000;
+const PORT = process.env.PORT || 3000;
 
-const handlebars = require('express-handlebars');
+const hbs = exphbs.create({ helpers });
 
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
-app.engine('handlebars', handlebars({
-    layoutsDir: '${__dirname}/views/layouts'
-}));
+// Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(express.static('public'));
+app.use(routes);
 
-app.get('/', (req, res) => {
-    res.render('main', {layout: 'index'});
-});
-
-app.listen(port, () => {
-    console.log('app listening to port ' + port);
+db.sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log('Now listening to port: ' + PORT));
 });
