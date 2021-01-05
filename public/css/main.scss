@@ -1,5 +1,14 @@
+$colors: (
+  background-color: #ebf5fb,
+  footer-color: black,
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
 body {
-  background-color: #4869A0;
+  background-color: color(background-color);
   font-family: 'Merriweather', serif;
 }
 
