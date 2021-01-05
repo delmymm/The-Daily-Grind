@@ -4,14 +4,9 @@ const location = require('../models/Location');
 
 // route to get all drinks
 router.get('/', async (req, res) => {
-  /* const drinkData = await drink.findAll().catch((err) => {
-    res.json(err);
-  });
-  const drinks = drinkData.map((drink) => drink.get({ plain: true }));
-  res.render('all', { drinks }); */
-
   res.render('homepage');
 });
+
 router.get("/form", async (req, res) => {
   res.render('form');
 });
