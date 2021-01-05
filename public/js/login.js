@@ -46,5 +46,14 @@ document
   .addEventListener("submit", loginFormHandler);
 
 document
-  .querySelector(".signup-form")
-  .addEventListener("submit", signupFormHandler);
+
+   .querySelector('.login-form')
+  .addEventListener('submit', loginFormHandler);
+
+  window.localStorage.getItem('username');
+  window.localStorage.getItem('username');
+
+  // Store
+localStorage.setItem("lastname", "Smith");
+// Retrieve
+document.getElementById("result").innerHTML = localStorage.getItem("lastname");
