@@ -1,8 +1,10 @@
 const router = require('express').Router();
 const drink = require('../models/Drink');
 const location = require('../models/Location');
+const withauth = require("../utils/auth");
 
 // route to get all drinks
+//remember to add "withauth," after '/',
 router.get('/', async (req, res) => {
   res.render('homepage');
 });
@@ -11,16 +13,25 @@ router.get("/form", async (req, res) => {
   res.render('form');
 });
 
+//remember to add "withauth," after '/',
 router.get("/coffee", async (req, res) => {
   res.render('coffee');
 });
-
+//remember to add "withauth," after '/',
 router.get("/tea", async (req, res) => {
   res.render('tea');
 });
-
+//remember to add "withauth," after '/',
 router.get("/kids", async (req, res) => {
   res.render('kids');
+});
+
+router.get("/login", async (req, res) => {
+  res.render('login');
+});
+
+router.get("/register", async (req, res) => {
+  res.render('register');
 });
 
 // route to get one drink

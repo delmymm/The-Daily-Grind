@@ -1,6 +1,12 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
 $colors: (
   background-color: #ebf5fb,
   footer-color: black,
+  link-color: #b39fdd,
+  linktwo-color: #460d59,
+  deepmutedblue-color: #4869a0,
+  lightgray-color: #e5e7e9,
 );
 
 @function color($color-name) {
@@ -9,8 +15,12 @@ $colors: (
 
 body {
   background-color: color(background-color);
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
+  background-image: url("public\assets\mountains2.png");
+  padding: 50px;
 }
+ 
+
 
 .footer {
   position: fixed;
@@ -20,8 +30,8 @@ body {
   color: black;
   text-align: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 #welcomeJumbo {
@@ -40,9 +50,12 @@ body {
   background-repeat: no-repeat;
   height: 100px;
   -o-object-position: 20% 10%;
-     object-position: 20% 10%;
+  object-position: 20% 10%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   text-shadow: 2px 2px #faf7f7;
+}
+.card-title {
+  color: color(linktwo-color)!important;
 }
 /*# sourceMappingURL=style.css.map */
