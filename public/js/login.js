@@ -1,54 +1,50 @@
-/**
- * User Login Form
- */
-
-$("#login").submit(e => {
-    e.preventDefault();
-    $(".form-control").attr("disabled", "disabled");
-    $(".btn").attr("disabled", "disabled");
-    let data = {
-        emailid: $("#emailid").val(),
-        password: $("#password").val()
-    };
-    $.ajax({
+const loginFormHandler = async (event) => {
+    event.preventDefault();
+  
+    const email = document.querySelector("#email-login").value.trim();
+    const password = document.querySelector("#password-login").value.trim();
+  
+    if (email && password) {
+      const response = await fetch("api/users/login", {
         method: "POST",
-        url: "index.php",
-        data: {
-            data: data
-        },
-        success: (response) => {
-            console.log(response);
-            if (response == true) {
-                var alert_msg = `<div class="alert alert-success">
-                Login Successfully
-                </div>`;
-                $("#login").prepend(alert_msg);
-                setTimeout(() => {
-                    window.location.href = "dashboard.php";
-                }, 5000);
-            } else if (response == "Password And Email Does Not Match") {
-                $(".form-control").removeAttr("disabled");
-                $(".btn").removeAttr("disabled");
-                var alert_msg = `<div class="alert alert-danger">
-                Password And Email Does Not Match
-                </div>`;
-                $("#login").prepend(alert_msg);
-                setTimeout(() => {
-                    $('.alert').remove();
-                }, 3000);
-
-            } else if (response == "User does not exist!") {
-                $(".form-control").removeAttr("disabled");
-                $(".btn").removeAttr("disabled");
-                var alert_msg = `<div class="alert alert-danger">
-                User does not exist!
-                </div>`;
-                $("#login").prepend(alert_msg);
-                setTimeout(() => {
-                    $('.alert').remove();
-                }, 5000);
-            }
-        }
-    });
-
-});
+        body: JSON.stringify({ email, password }),
+        headers: { "Content-Type": "application/json" },
+      });
+  
+      if (response.ok) {
+        document.location.replace("/profile");
+      } else {
+        alert(response.statusText);
+      }
+    }
+  };
+  
+  const signupFormHandler = async (event) => {
+    event.preventDefault();
+  
+    const name = document.querySelector("#name-signup").value.trim();
+    const email = document.querySelector("#email-signup").value.trim();
+    const password = document.querySelector("#password-signup").value.trim();
+  
+    if (name && email && password) {
+      const response = await fetch("/api/users", {
+        method: "POST",
+        body: JSON.stringify({ name, email, password }),
+        headers: { "Content-Type": "application/json" },
+      });
+  
+      if (response.ok) {
+        document.location.replace("/profile");
+      } else {
+        alert(response.statusText);
+      }
+    }
+  };
+  
+  document
+    .querySelector(".login-form")
+    .addEventListener("submit", loginFormHandler);
+  
+  document
+    .querySelector(".signup-form")
+    .addEventListener("submit", signupFormHandler);
