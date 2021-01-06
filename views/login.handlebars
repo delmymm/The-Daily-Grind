@@ -4,7 +4,7 @@
         <div class="card text-center" style="width: 18rem;">
             <div class="card-main">
                 <h5 class="card-title">Welcome to The Daily Grind!</h5>
-                <form action="/api/user/login" id="login" method="POST">
+                <form onsubmit="loginFormHandler()" id="login">
                     <div class="form-group">
                         <label for="email">Email Id <span class="text-danger">*</span></label>
                         <input type="email" class="form-control" name="username" id="email"
