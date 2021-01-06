@@ -5,7 +5,7 @@ const withauth = require("../utils/auth");
 
 // route to get all drinks
 //remember to add "withauth," after '/',
-router.get('/', withauth, async (req, res) => {
+router.get('/', async (req, res) => {
   res.render('homepage');
 });
 
