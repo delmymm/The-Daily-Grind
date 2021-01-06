@@ -4,6 +4,7 @@ const location = require('../models/Location');
 const withauth = require("../utils/auth");
 
 // route to get all drinks
+//remember to add "withauth," after '/',
 router.get('/', withauth, async (req, res) => {
   res.render('homepage');
 });
@@ -12,15 +13,16 @@ router.get("/form", async (req, res) => {
   res.render('form');
 });
 
-router.get("/coffee", withauth, async (req, res) => {
+//remember to add "withauth," after '/',
+router.get("/coffee", async (req, res) => {
   res.render('coffee');
 });
-
-router.get("/tea", withauth, async (req, res) => {
+//remember to add "withauth," after '/',
+router.get("/tea", async (req, res) => {
   res.render('tea');
 });
-
-router.get("/kids", withauth, async (req, res) => {
+//remember to add "withauth," after '/',
+router.get("/kids", async (req, res) => {
   res.render('kids');
 });
 
