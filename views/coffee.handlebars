@@ -1,13 +1,21 @@
+<main>
+    <!-- welcome jumbotron -->
+    <div class="jumbotron jumbotron-fluid bg-light" id="welcomeJumbo">
+        <div class="container">
+            <h1 class="display-4">Welcome! </h1>
+        </div>
+    </div>
+
     <!-- Location Finder -->
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
                 <div class="card" style="width: 18rem;">
                     <img class="card-img-top"
-                        src="../public/assets/neighborhood-map.jpg"
+                        src="https://static.vecteezy.com/system/resources/previews/000/599/083/non_2x/location-icon-vector.jpg"
                         alt="location finder">
                     <div class="card-body">
-                        <p class="card-text">Location map of user input store locations</p>
+                        <p class="card-text">User input for favorite drinks and descriptions from the DB for tea and chai users</p>
                     </div>
                 </div>
             </div>
@@ -15,9 +23,9 @@
             <!-- Blog -->
             <div class="col-lg-4">
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="../public/assets/blog1.jpg" alt="blog">
+                    <img class="card-img-top" src="https://img.icons8.com/ios/452/blog.png" alt="blog">
                     <div class="card-body">
-                        <p class="card-text">Blog for information about various coffee shops input by users</p>
+                        <p class="card-text">Blog for Coffee users.</p>
                     </div>
                 </div>
             </div>
@@ -26,12 +34,12 @@
             <div class="col-lg-4">
                 <div class="card" style="width: 18rem;">
                     <img class="card-img-top"
-                        src="../public/assets/shopping.png"
+                        src="https://icons-for-free.com/iconfiles/png/512/camera-131965017355314519.png"
                         alt="picture upload icon">
                     <div class="card-body">
                         <p class="card-text">
                         <form action="upload.php" method="post" enctype="multipart/form-data">
-                            User unput photos of coffee shop locations:
+                            Select image to upload:
                             <input type="file" name="fileToUpload" id="fileToUpload">
                             <input type="submit" value="Upload Image" name="submit">
                         </form>
@@ -41,3 +49,16 @@
             </div>
         </div>
     </div>
+
+    <!-- toggle switches -->
+    <div class="notifications" style="float:right;">
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="customSwitch1">
+            <label class="custom-control-label" for="customSwitch1">Email Notifications</label>
+        </div>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="customSwitch2">
+            <label class="custom-control-label" for="customSwitch2">Text Notifications</label>
+        </div>
+    </div>
+</main>
