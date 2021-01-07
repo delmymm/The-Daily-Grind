@@ -1,7 +1,7 @@
 const newFormHandler = async (event) => {
     event.preventDefault();
-    const title = document.querySelector("#title-name").value.trim();
-    const body = document.querySelector("#entry-body").value.trim();
+    const title = document.querySelector("#name").value.trim();
+    const body = document.querySelector("#body").value.trim();
     
   
     if (title && body) {
@@ -22,8 +22,8 @@ const newFormHandler = async (event) => {
   };
   
   const delButtonHandler = async (event) => {
-    if (event.target.hasAttribute("data-id")) {
-      const id = event.target.getAttribute("data-id");
+    if (event.target.hasAttribute("user_id")) {
+      const id = event.target.getAttribute("User_id");
   
       const response = await fetch(`/api/entry/${id}`, {
         method: "DELETE",
